@@ -1,4 +1,5 @@
-#We need logistic regression when we Y variable is limited from (1 , 0). 
+#We need logistic regression when the Y variable is limited from (1 , 0). 
+#Let's regress y2
 import pandas
 
 from sklearn import linear_model
@@ -29,3 +30,10 @@ new_dataset = new_dataset.values
 prediction = machine.predict(new_dataset)
 
 print(prediction)
+
+#for multiple categorical variables, we cannot use linear regression.
+# Instead you do a multinomial logit regression. It's not the most efficient.
+# It doesn't take into account the order. 
+# So, do order logit through scikit extend package. 
+
+#For count data (non-negative integers) do poisson: PoissonRegression
