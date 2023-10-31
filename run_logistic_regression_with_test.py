@@ -41,6 +41,13 @@ for train_index, test_index in kfold_object.split(data):
 
 	accuracy_score = metrics.accuracy_score(target_test, prediction)
 	print("Accuracy score: ", accuracy_score)
+
+	#How many possible values can you Y variable have: determines the dimension of the table. So for 0 and 1, the table is going to be a 2x2. 
+	#Also works for ordered categorical variables. 
+	#[0,0 1,0
+	#[0,1 1, 1]]
+	# Left-upper hand corner: # of cases that the machine predicted correctly 0. Right-lower-hand corner: # of cases it predicted correctly 1.
+	# Right-upper hand corner: # of cases that the machine predicted it wrong (0)and it was actually 1. 
 	confusion_matrix = metrics.confusion_matrix(target_test, prediction)
 	print("Confusion matrix: ")
 	print(confusion_matrix)
