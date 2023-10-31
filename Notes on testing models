@@ -1,0 +1,17 @@
+Notes on testing models
+We can split the dataset into two parts. 
+	  Training and Testing
+target
+data
+
+So we have target_train, target_test
+		   data_train,   data_test
+
+The test data serves as the new_dataset, or the real world situation. 
+So do simulate what we did, we take away the target_test to make it ?.
+We do exactly what we did. We can make a prediction about the target_test, 
+We can compare the prediction with our actual target_test, to see how our machine did. 
+
+So we use the whole dataset to train the model to know about the real world before we go into the real world. Afterwards when we implement the new_dataset, we know our model is good or not. 
+
+In our thesis, we can run our model over and over again. 
